@@ -1,0 +1,26 @@
+/* PRODUCT STYLE 
+=========================================== */
+/* index.html.twig */
+a.figure-link {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+}
+a.figure-link:hover {
+    text-decoration: underline;
+    color: var(--bs-gray-dark);
+}
+
+/* show.html.twig */
+.col-sticky {
+    top: 20;
+    position: sticky;
+    display: block;
+}
+.text-description {
+    text-align: justify;
+}
+.text-price {
+    font-weight: bolder;
+    font-size: 2.5em;
+}

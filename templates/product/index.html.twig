@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits - moncommerce{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-md-4">
+                        <figure class="figure">
+                            <a href="{{ path('product', { 'slug' : product.slug }) }}">
+                                <img src="{{ product.image }}" class="figure-img img-fluid rounded" alt="{{ product.name }}">
+                            </a>
+                            <figcaption class="figure-caption text-end">
+                                <a href="{{ path('product', { 'slug' : product.slug }) }}" class="figure-link">{{ product.name }}</a> &nbsp;
+                                {{ product.price }}€
+                            </figcaption>
+                        </figure>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
