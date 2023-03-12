@@ -4,12 +4,19 @@
 
 {% block body %}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-3">
             <div class="row">
-                {% include "product/filter.html.twig" %}
+                <div class="col-sticky">
+                    {% include "product/filter.html.twig" %}
+                </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-9">
+            <div class="d-flex justify-content-end">
+                {#{{ knp_pagination_sortable(products, 'Prix', 'p.price', {}, {}, 'pages/sortable.html.twig') }}
+                {{ knp_pagination_sortable(products, 'Promo', 'p.isPromo', {}, {}, 'pages/sortable.html.twig') }}
+                {{ knp_pagination_sortable(products, 'Meilleur vente', 'p.isBest', {}, {}, 'pages/sortable.html.twig') }}#}
+            </div>
             <div class="row">
                 {% for product in products %}
                     {% include "product/single.html.twig" %}

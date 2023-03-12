@@ -18,4 +18,24 @@ class Search
      * @var string
      */
     public $q = "";
+
+    /**
+     * @var boolean
+     */
+    public $promo = false;
+
+    /**
+     * @var boolean
+     */
+    public $best = false;
+
+    /**
+     * @var null|integer
+     */
+    public $min;
+
+    /**
+     * @var null|integer
+     */
+    public $max;
 }

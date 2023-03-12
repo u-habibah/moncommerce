@@ -1,6 +1,18 @@
 {{ form_start(form) }}
     {{ form_row(form.q) }}
+    <h4>Catégories</h4>
     {{ form_row(form.categories) }}
+    <h4>Prix</h4>
+    <div class="row">
+        <div class="col-6">
+            {{ form_row(form.min) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(form.max) }}
+        </div>
+    </div>
+    {{ form_row(form.promo) }}
+    {{ form_row(form.best) }}
     
     <input type="submit" value="Appliquer" class="btn btn-primary">
 {{ form_end(form) }}
