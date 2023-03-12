@@ -10,6 +10,9 @@ a.figure-link:hover {
     text-decoration: underline;
     color: var(--bs-gray-dark);
 }
+span.figure-cart {
+    float: right;
+}
 
 /* show.html.twig */
 .col-sticky {

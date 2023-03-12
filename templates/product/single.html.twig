@@ -1,0 +1,12 @@
+<div class="col-md-4">
+    <figure class="figure">
+        <a href="{{ path('product', { 'slug' : product.slug }) }}">
+            <img src="{{ product.image }}" class="figure-img img-fluid rounded" alt="{{ product.name }}">
+        </a>
+        <figcaption class="figure-caption text-start">
+            <a href="{{ path('product', { 'slug' : product.slug }) }}" class="figure-link">{{ product.name }}</a> &nbsp;
+            {{ product.price }}€
+            <a href="#" class="figure-link"><span class="figure-cart"><i class="fa fa-shopping-cart"></i></span></a>
+        </figcaption>
+    </figure>
+</div>
