@@ -12,15 +12,18 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div class="d-flex justify-content-end">
-                {#{{ knp_pagination_sortable(products, 'Prix', 'p.price', {}, {}, 'pages/sortable.html.twig') }}
+            <div class="d-flex justify-content-end mb-3">
+                {{ knp_pagination_sortable(products, 'Prix', 'p.price', {}, {}, 'pages/sortable.html.twig') }}
                 {{ knp_pagination_sortable(products, 'Promo', 'p.isPromo', {}, {}, 'pages/sortable.html.twig') }}
-                {{ knp_pagination_sortable(products, 'Meilleur vente', 'p.isBest', {}, {}, 'pages/sortable.html.twig') }}#}
+                {{ knp_pagination_sortable(products, 'Meilleur vente', 'p.isBest', {}, {}, 'pages/sortable.html.twig') }}
             </div>
             <div class="row">
                 {% for product in products %}
                     {% include "product/single.html.twig" %}
                 {% endfor %}
+            </div>
+            <div class="mt-4">
+                {{ knp_pagination_render(products, 'pages/pagination.html.twig') }}
             </div>
         </div>
     </div>

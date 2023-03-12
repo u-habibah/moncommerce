@@ -1,14 +1,17 @@
 /* PRODUCT STYLE 
 =========================================== */
 /* index.html.twig */
-a.figure-link {
+a.figure-link, a.figure-link-sort {
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
 }
-a.figure-link:hover {
+a.figure-link:hover, a.figure-link-sort {
     text-decoration: underline;
     color: var(--bs-gray-dark);
+}
+a.figure-link-sort {
+    margin-left: 2px;
 }
 span.figure-cart {
     float: right;
