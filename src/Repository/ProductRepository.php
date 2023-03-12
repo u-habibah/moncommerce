@@ -62,6 +62,28 @@ class ProductRepository extends ServiceEntityRepository
                 ->andWhere('p.name like :q')
                 ->setParameter('q', "%{$search->q}%");
         }
+
+        if (!empty($search->min)) {
+            $query = $query
+                ->andWhere('p.price >= :min')
+                ->setParameter('min', $search->min);
+        }
+
+        if (!empty($search->max)) {
+            $query = $query
+                ->andWhere('p.price <= :max')
+                ->setParameter('max', $search->max);
+        }
+
+        if (!empty($search->promo)) {
+            $query = $query
+                ->andWhere('p.isPromo = 1');
+        }
+
+        if (!empty($search->best)) {
+            $query = $query
+                ->andWhere('p.isBest = 1');
+        }
         
         return $query->getQuery()->getResult();
     }
